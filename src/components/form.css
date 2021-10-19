@@ -1,0 +1,50 @@
+.app-form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 270px;
+    align-items:center;
+    border: 2px solid black;  
+    background-color:lightgray;
+}
+.app-form-firstname{
+    display: flex;
+    justify-content:center;
+    margin: 10px 30px 10px 10px;
+    align-self: flex-end;
+}
+.app-form-lastname{
+    margin: 10px;
+    align-self: flex-end;
+    margin: 10px 30px 10px 10px;
+}
+.app-form-age{
+    margin: 10px;
+    align-self: flex-end;
+    margin: 10px 30px 10px 10px;
+}
+
+.form-input{
+    width: 250px;
+    height: 25px;
+    background-color:ghostwhite;
+}
+.app-form-button{
+    margin: 10px;
+    width: 180px;
+    height: 30px;
+    background-color: grey;
+    border: none;
+    color: white;
+    align-self:center;
+}
+.app-form-button:hover{
+    background-color:cadetblue;
+    color: white;
+    cursor: pointer;
+}
+
+.app-form-button:active{
+    background-color:lightseagreen;
+    color: white;
+}
