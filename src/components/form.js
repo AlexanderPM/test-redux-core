@@ -1,14 +1,18 @@
 import { useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Label from "./form-components/label";
 import "./form.css";
+import updateStoreReduxCore from "../redux/actions";
 
-const Form = (props) => {
+const Form = () => {
+
+    const state = useSelector(state => state)
+
+    const dispatch = useDispatch();
 
     const firstNameInput = useRef(null);
     const lastNameInput = useRef(null);
     const ageInput = useRef(null);
-
-    console.log(props.state)
 
     const cleanerInput = () => {
         firstNameInput.current.value = "";
@@ -17,11 +21,11 @@ const Form = (props) => {
     }
 
     const buttonClick = () => {
-        props.updateStoreReduxCore(firstNameInput.current.value, lastNameInput.current.value, ageInput.current.value);
+        dispatch(updateStoreReduxCore(firstNameInput.current.value, lastNameInput.current.value, ageInput.current.value));
         cleanerInput();
     }
 
-    
+    console.log(state)
     return (
         <div className="app-form">
             <h3>Форма регистрации пользователя:</h3>
